@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <title>APU Student Hockey Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        const username = document.getElementById('username')
+        const email = document.getElementById('email')
+        const message = document.getElementById('message')
+        const form = document.getElementById('form')
+        const errorElement = document.getElementById('Login_Form')
+
+        form.addEventListener('submit', (e) => {
+            let messages = []
+            if (name.value === '' || name.value == null) {
+                messages.push('UserName is required')
+            }
+
+            if (message.value.length <= 6) {
+                messages.push('Message must be longer than 6 characters')
+            }
+
+
+
+
+
+            if (messages.length > 0) {
+                e.preventDefault()
+                errorElement.innerText = messages.join(', ')
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <marquee><img src="img/logo.png" width="40%" height="80px">
+
+    </marquee>
+    <center>
+        <h2>Welcome to APU Student Hockey Club</h2>
+    </center>
+
+    <div class="nav">
+        <div id="nav">
+            <nav>
+
+                <table border="4">
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="index.html">Home</a>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="club.html">Club mission</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="vision.html">Vision</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="objective.html">Objective</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="rules.html">Rules/Regulations</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="equipment.html">Required Equipment</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="calender.html">Calendar and events</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="news.html">News and media</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="feedback.html">Enquiry/Feedback form</a>
+                                </div>
+                            </td>
+
+
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="login.html">Login</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="nav-image">
+
+                                    <a href="register.html">Register</a>
+                                </div>
+                            </td>
+
+
+                        </tr>
+
+
+
+                    </tbody>
+
+
+
+                </table>
+
+
+            </nav>
+
+        </div>
+    </div>
+    <div class="Login_Form">
+        <form action="index.html" method="GET" name="myForm" id="form">
+            <div class="login-header">
+                <center><img src="img/register.png" width="50px" height="50px">
+                    <br>
+                    <b><label>Feedback</label></b></center>
+
+
+            </div>
+
+            <div class="login_text">
+                <br>
+
+                <input type="text" id="username" name="username" placeholder="username" required><br>
+                <input type="text" id="email" name="Email" placeholder="Email" required><br>
+
+                <input type="text" id="message" placeholder="Enter Your Message Here" required><br>
+
+                <br>
+
+
+                <button class="loginbtn" type="submit" onclick="alert('Feedback Submitted')" value="Submit">Submit Your Feedback</button><br>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
